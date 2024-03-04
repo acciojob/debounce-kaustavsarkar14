@@ -14,11 +14,12 @@ function debounce(callback, delay, immediate = false) {
     const callNow = immediate && !timer;
     
     clearTimeout(timer);
-    timer = setTimeout(later, delay);
 
     if (callNow) {
       callback.apply(context, args);
     }
+
+    timer = setTimeout(later, delay);
   };
   }
   
